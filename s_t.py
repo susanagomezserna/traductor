@@ -22,7 +22,7 @@ image = Image.open('traductor.jpg')
 st.image(image)
 
 
-st.write("Toca el Botón y habla lo que quires traducir")
+st.write("Toca el Botón y habla lo que quieres traducir")
 
 stt_button = Button(label=" Inicio ", width=200)
 
@@ -66,12 +66,14 @@ if result:
     text = str(result.get("GET_TEXT"))
     in_lang = st.selectbox(
         "Selecciona el lenguaje de Entrada",
-        ("Inglés", "Español", "Bengali", "Coreano", "Mandarín", "Japonés"),
+        ("Inglés", "Español", "Francés", "Bengali", "Coreano", "Mandarín", "Japonés"),
     )
     if in_lang == "Inglés":
         input_language = "en"
     elif in_lang == "Español":
         input_language = "es"
+    elif in_lang == "Francés":
+        input_language = "fr"    
     elif in_lang == "Bengali":
         input_language = "bn"
     elif in_lang == "Coreano":
@@ -83,12 +85,14 @@ if result:
     
     out_lang = st.selectbox(
         "Selecciona el lenguaje de salida",
-        ("Inglés", "Español", "Bengali", "Coreano", "Mandarín", "Japonés"),
+        ("Inglés", "Español", "Francés", "Bengali", "Coreano", "Mandarín", "Japonés"),
     )
     if out_lang == "Inglés":
         output_language = "en"
     elif out_lang == "Español":
         output_language = "es"
+    elif out_lang == "Francés":
+        output_language = "fr"  
     elif out_lang == "Bengali":
         output_language = "bn"
     elif out_lang == "Coreano":
